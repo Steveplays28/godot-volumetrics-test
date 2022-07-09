@@ -1,0 +1,54 @@
+[gd_scene load_steps=6 format=3 uid="uid://bfnb6b7jwtxro"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_5i4d6"]
+sky_top_color = Color(0.384314, 0.454902, 0.54902, 1)
+sky_horizon_color = Color(0.647059, 0.654902, 0.670588, 1)
+
+[sub_resource type="Sky" id="Sky_2k5pa"]
+sky_material = SubResource( "ProceduralSkyMaterial_5i4d6" )
+
+[sub_resource type="Environment" id="Environment_omkjm"]
+background_mode = 2
+sky = SubResource( "Sky_2k5pa" )
+ambient_light_sky_contribution = 0.5
+sdfgi_use_occlusion = true
+volumetric_fog_enabled = true
+volumetric_fog_density = 0.0
+volumetric_fog_length = 128.0
+
+[sub_resource type="FogMaterial" id="FogMaterial_us15l"]
+density = 0.05
+albedo = Color(0.384314, 0.454902, 0.54902, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_dlc77"]
+
+[node name="PitchBlack" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource( "Environment_omkjm" )
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-1, 0, -8.74228e-08, -2.26267e-08, 0.965926, 0.258819, 8.44439e-08, 0.258819, -0.965926, 0, 0, 0)
+light_color = Color(0.984314, 1, 0.862745, 1)
+light_energy = 5.0
+shadow_enabled = true
+
+[node name="FogVolume" type="FogVolume" parent="."]
+extents = Vector3(25, 25, 25)
+material = SubResource( "FogMaterial_us15l" )
+
+[node name="Floor" type="MeshInstance3D" parent="."]
+transform = Transform3D(100, 0, 0, 0, 1, 0, 0, 0, 100, 0, -11.3107, 0)
+mesh = SubResource( "BoxMesh_dlc77" )
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(25, 0, 0, 0, 10, 0, 0, 0, 5, 0, 0, 0)
+mesh = SubResource( "BoxMesh_dlc77" )
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(5, 0, 0, 0, 10, 0, 0, 0, 5, 30.8386, 0, 0)
+mesh = SubResource( "BoxMesh_dlc77" )
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="."]
+transform = Transform3D(25, 0, 0, 0, 10, 0, 0, 0, 5, 0, 0, 0)
+mesh = SubResource( "BoxMesh_dlc77" )

@@ -1,0 +1,70 @@
+[gd_scene load_steps=9 format=3 uid="uid://ksdtwo2gksd6"]
+
+[ext_resource type="Shader" path="res://volumetric_fog.gdshader" id="1_x67qi"]
+
+[sub_resource type="Gradient" id="Gradient_x8e7p"]
+interpolation_mode = 2
+offsets = PackedFloat32Array(0.396476, 0.823789)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_vk02l"]
+gradient = SubResource( "Gradient_x8e7p" )
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_jj6xj"]
+sky_top_color = Color(0.698039, 0.823529, 1, 1)
+sky_horizon_color = Color(0.647059, 0.654902, 0.670588, 1)
+
+[sub_resource type="Sky" id="Sky_i3yfd"]
+sky_material = SubResource( "ProceduralSkyMaterial_jj6xj" )
+
+[sub_resource type="Environment" id="Environment_busp1"]
+background_mode = 2
+sky = SubResource( "Sky_i3yfd" )
+ambient_light_sky_contribution = 0.4
+tonemap_mode = 3
+tonemap_exposure = 0.5
+ssao_enabled = true
+sdfgi_enabled = true
+sdfgi_use_occlusion = true
+sdfgi_read_sky_light = false
+sdfgi_cascades = 8
+sdfgi_max_distance = 3276.8
+volumetric_fog_enabled = true
+volumetric_fog_density = 0.0
+volumetric_fog_length = 512.0
+adjustment_enabled = true
+adjustment_color_correction = SubResource( "GradientTexture1D_vk02l" )
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_c8g6l"]
+shader = ExtResource( "1_x67qi" )
+shader_param/density = 0.02
+shader_param/albedo = Color(1, 1, 1, 1)
+shader_param/emission = Color(0, 0, 0, 1)
+shader_param/height_falloff = 0.0
+shader_param/edge_fade = 0.0
+
+[sub_resource type="BoxMesh" id="BoxMesh_sc87x"]
+
+[node name="Main" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource( "Environment_busp1" )
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-1, 0, -8.74228e-08, -2.26267e-08, 0.965926, 0.258819, 8.44439e-08, 0.258819, -0.965926, 0, 0, 0)
+light_color = Color(1, 1, 0.847059, 1)
+light_energy = 2.0
+shadow_enabled = true
+shadow_blur = 0.1
+directional_shadow_max_distance = 1000.0
+
+[node name="FogVolume" type="FogVolume" parent="."]
+extents = Vector3(500, 100, 500)
+material = SubResource( "ShaderMaterial_c8g6l" )
+
+[node name="Floor" type="MeshInstance3D" parent="."]
+transform = Transform3D(100, 0, 0, 0, 1, 0, 0, 0, 100, 0, -6.79699, 0)
+mesh = SubResource( "BoxMesh_sc87x" )
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(50, 0, 0, 0, 50, 0, 0, 0, 5, 0, 24.2259, -48.6166)
+mesh = SubResource( "BoxMesh_sc87x" )
