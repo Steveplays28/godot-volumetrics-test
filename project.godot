@@ -12,14 +12,24 @@ config_version=5
 
 config/name="godot-volumetrics-test"
 run/main_scene="res://scenes/main.tscn"
-config/icon="res://addons/terrain-3d/icon.png"
 config/features=PackedStringArray("4.0", "Vulkan Clustered")
+config/icon="res://addons/terrain-3d/icon.png"
+
+[dotnet]
+
+project/assembly_name="godot-volumetrics-test"
 
 [editor_plugins]
 
 enabled=PackedStringArray()
 
+[physics]
+
+2d/run_on_separate_thread=true
+3d/run_on_separate_thread=true
+
 [rendering]
 
-environment/volumetric_fog/volume_size=256
-environment/volumetric_fog/volume_depth=256
+driver/threads/thread_model=2
+environment/volumetric_fog/volume_size=512
+anti_aliasing/quality/use_taa=true
