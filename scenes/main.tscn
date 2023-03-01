@@ -53,7 +53,7 @@ uv1_scale = Vector3(150, 150, 150)
 material = SubResource("StandardMaterial3D_u0e23")
 size = Vector3(100, 1, 100)
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_yru58"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_v4gb2"]
 render_priority = 0
 shader = ExtResource("6_nf3go")
 shader_parameter/player_pos = Vector3(2.46344, -5.51281, -2.39943)
@@ -79,7 +79,7 @@ shader_parameter/texture_albedo = ExtResource("7_eps6w")
 shader_parameter/wind_pattern = ExtResource("8_rqic8")
 
 [sub_resource type="QuadMesh" id="QuadMesh_8oxqs"]
-material = SubResource("ShaderMaterial_yru58")
+material = SubResource("ShaderMaterial_v4gb2")
 
 [sub_resource type="MultiMesh" id="MultiMesh_luxak"]
 transform_format = 1
@@ -133,11 +133,6 @@ sgt_rotation_rand = 1.0
 sgt_dist_min = 0.0
 sgt_follow_normal = false
 metadata/SimpleGrassTextured = "1.0.2"
-
-[node name="Wall" type="MeshInstance3D" parent="."]
-transform = Transform3D(50, 0, 0, 0, 50, 0, 0, 0, 5, 0, 24.2259, -48.6166)
-visible = false
-mesh = SubResource("BoxMesh_sc87x")
 
 [node name="Trees" type="Node3D" parent="."]
 
