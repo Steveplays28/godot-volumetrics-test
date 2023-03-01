@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://cgxlilkxm22ct"]
+
+[ext_resource type="PackedScene" uid="uid://cclyt7270yydb" path="res://resources/models/beech_a.DAE" id="1_tr1nh"]
+[ext_resource type="PackedScene" uid="uid://brhjs8vd88k1x" path="res://resources/models/beech_b.DAE" id="2_2ik8i"]
+[ext_resource type="PackedScene" uid="uid://ctwmkmwki0juh" path="res://resources/models/beech_c.DAE" id="3_f4oks"]
+
+[node name="TreeClump" type="Node3D"]
+
+[node name="beech_a" parent="." instance=ExtResource("1_tr1nh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.389814, 0, 2.53872)
+
+[node name="beech_b" parent="." instance=ExtResource("2_2ik8i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.94566, 9.53674e-07, 0.115905)
+
+[node name="beech_c" parent="." instance=ExtResource("3_f4oks")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.48653, 0, -1.65127)

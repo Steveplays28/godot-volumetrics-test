@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1">
+  <asset>
+    <contributor>
+      <author>Michael Betke</author>
+      <authoring_tool>OpenCOLLADA for 3ds Max;  Version: 1.3.1;  Revision: 847M;  Platform: x64;  Configuration: Release_Max2012_static</authoring_tool>
+      <source_data>file:///I:/Pure3d%20Shop/Pure3d%20Webshop%20Einzelmodelle/ToDo/NaturePack_Europe/bushes/hartriegel.max</source_data>
+    </contributor>
+    <created>2012-02-03T13:32:14</created>
+    <modified>2012-02-03T13:32:14</modified>
+    <unit name="centimeter" meter="0.01"/>
+    <up_axis>Z_UP</up_axis>
+  </asset>
+  <library_effects>
+    <effect id="branch">
+      <profile_COMMON>
+        <newparam sid="bush_branch_diff_dds-surface">
+          <surface type="2D">
+            <init_from>bush_branch_diff_dds</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="bush_branch_diff_dds-sampler">
+          <sampler2D>
+            <source>bush_branch_diff_dds-surface</source>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <blinn>
+            <emission>
+              <color>0 0 0 1</color>
+            </emission>
+            <ambient>
+              <color>0.588 0.588 0.588 1</color>
+            </ambient>
+            <diffuse>
+              <texture texture="bush_branch_diff_dds-sampler" texcoord="CHANNEL1"/>
+            </diffuse>
+            <specular>
+              <color>0.9 0.9 0.9 1</color>
+            </specular>
+            <shininess>
+              <float>10</float>
+            </shininess>
+            <reflective>
+              <color>0 0 0 1</color>
+            </reflective>
+            <transparent opaque="A_ONE">
+              <texture texture="bush_branch_diff_dds-sampler" texcoord="CHANNEL1"/>
+            </transparent>
+            <transparency>
+              <float>1</float>
+            </transparency>
+          </blinn>
+        </technique>
+      </profile_COMMON>
+      <extra>
+        <technique profile="OpenCOLLADA3dsMax">
+          <extended_shader>
+            <apply_reflection_dimming>0</apply_reflection_dimming>
+            <dim_level>0</dim_level>
+            <falloff_type>0</falloff_type>
+            <index_of_refraction>1.5</index_of_refraction>
+            <opacity_type>0</opacity_type>
+            <reflection_level>3</reflection_level>
+            <wire_size>1</wire_size>
+            <wire_units>0</wire_units>
+          </extended_shader>
+          <shader>
+            <ambient_diffuse_lock>1</ambient_diffuse_lock>
+            <ambient_diffuse_texture_lock>1</ambient_diffuse_texture_lock>
+            <diffuse_specular_lock>0</diffuse_specular_lock>
+            <soften>0.1</soften>
+            <use_self_illum_color>0</use_self_illum_color>
+          </shader>
+        </technique>
+      </extra>
+    </effect>
+    <effect id="leaf">
+      <profile_COMMON>
+        <newparam sid="hartriegel_diff_dds-surface">
+          <surface type="2D">
+            <init_from>hartriegel_diff_dds</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="hartriegel_diff_dds-sampler">
+          <sampler2D>
+            <source>hartriegel_diff_dds-surface</source>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <blinn>
+            <emission>
+              <color>0 0 0 1</color>
+            </emission>
+            <ambient>
+              <color>0.588 0.588 0.588 1</color>
+            </ambient>
+            <diffuse>
+              <texture texture="hartriegel_diff_dds-sampler" texcoord="CHANNEL1"/>
+            </diffuse>
+            <specular>
+              <color>0.9 0.9 0.9 1</color>
+            </specular>
+            <shininess>
+              <float>10</float>
+            </shininess>
+            <reflective>
+              <color>0 0 0 1</color>
+            </reflective>
+            <transparent opaque="A_ONE">
+              <texture texture="hartriegel_diff_dds-sampler" texcoord="CHANNEL1"/>
+            </transparent>
+            <transparency>
+              <float>1</float>
+            </transparency>
+          </blinn>
+        </technique>
+      </profile_COMMON>
+      <extra>
+        <technique profile="OpenCOLLADA3dsMax">
+          <extended_shader>
+            <apply_reflection_dimming>0</apply_reflection_dimming>
+            <dim_level>0</dim_level>
+            <falloff_type>0</falloff_type>
+            <index_of_refraction>1.5</index_of_refraction>
+            <opacity_type>0</opacity_type>
+            <reflection_level>3</reflection_level>
+            <wire_size>1</wire_size>
+            <wire_units>0</wire_units>
+          </extended_shader>
+          <shader>
+            <ambient_diffuse_lock>1</ambient_diffuse_lock>
+            <ambient_diffuse_texture_lock>1</ambient_diffuse_texture_lock>
+            <diffuse_specular_lock>0</diffuse_specular_lock>
+            <soften>0.1</soften>
+            <use_self_illum_color>0</use_self_illum_color>
+          </shader>
+        </technique>
+      </extra>
+    </effect>
+  </library_effects>
+  <library_materials>
+    <material id="branch-material" name="branch">
+      <instance_effect url="#branch"/>
+    </material>
+    <material id="leaf-material" name="leaf">
+      <instance_effect url="#leaf"/>
+    </material>
+  </library_materials>
+  <library_geometries>
+    <geometry id="geom-_lod1" name="_lod1">
+      <mesh>
+        <source id="geom-_lod1-positions">
+          <float_array id="geom-_lod1-positions-array" count="393">148.6884 119.3486 84.64024 17.18884 -50.23837 183.0607 132.7706 -176.411 20.39607 72.73553 33.08528 -108.9788 283.5339 121.8597 -50.48441 44.49704 57.01935 124.1911 258.9724 -41.48383 118.1989 69.40689 10.446 -109.2493 69.42596 11.61608 -107.8553 165.7004 49.11387 15.90617 5.588104 -81.72524 7.052856 72.22971 21.27921 -107.9082 -60.54774 -69.73872 -99.09616 87.54825 -36.85084 41.68458 70.75214 20.78166 -108.1922 -22.46732 -44.34272 6.091248 181.9789 -12.25784 3.739723 66.95535 28.76669 -107.7926 137.5909 -105.2304 -52.59162 189.691 93.22515 -25.49557 74.91922 44.83725 -107.9082 -69.18721 116.5829 -99.09613 31.57858 3.17976 41.68453 -68.05908 5.281897 43.40734 -7.291214 159.634 43.40731 67.81866 54.43862 95.99358 162.3478 -111.4366 30.19108 137.8885 -15.69769 81.48132 74.04092 24.59222 -72.14309 147.4528 137.2329 -61.69234 -4.104645 96.20692 11.22984 116.4517 116.9864 67.98206 62.52878 23.30515 -31.964 177.4093 -46.5496 -21.51328 131.6656 103.6512 51.40891 156.2036 -16.19663 108.1611 64.76144 88.71198 136.7128 110.9915 129.4826 20.11286 -39.72348 63.59962 60.24532 8.73584 28.86846 96.53373 30.56967 -76.35042 20.06623 -30.56969 76.35042 -20.06623 56.65189 14.65047 -15.3244 82.50766 18.44766 -55.50347 77.01492 44.52616 33.81077 14.53073 120.8295 67.55784 -3.628586 -11.7417 68.3923 7.792725 54.72604 147.8714 91.27707 38.1077 -38.48954 172.1806 48.70075 -100.0643 75.00461 132.7739 -73.45464 103.696 51.00231 22.17 131.2594 144.9672 -7.154289 12.03775 90.66206 0.3773117 103.696 51.10453 -26.18293 131.2593 148.4759 -11.75594 12.03775 96.29412 -28.57383 145.8283 147.6891 46.60735 61.81235 142.4729 -11.38539 175.057 76.88995 -21.08466 101.6042 52.30368 22.88842 145.1297 -37.72591 1.692673 173.6924 82.26198 -43.10285 20.84378 -106.1354 33.86086 119.2425 -84.97948 15.99541 12.08487 -50.48971 -51.43795 55.0405 43.91422 -39.04884 24 138.7406 -61.26373 -45.09094 27.60138 -51.56447 22.9903 -40.99998 74.57677 -2.270096 -53.23165 -23.71539 115.6324 -37.00571 31.55904 46.27808 64.55511 -17.29066 137.6243 105.2449 -38.48639 18.58795 137.5446 -83.28192 156.144 -122.2219 12.14383 178.9037 -43.16494 -48.52786 68.94397 -114.339 -40.61092 79.30304 -61.9501 -103.3979 80.05618 35.79757 -133.2957 172.7216 -34.36967 -72.39202 76.57645 6.499931 1.689537 89.69342 -74.03294 -59.88523 170.6877 25.72377 -33.27558 111.0282 45.88694 -28.98348 58.21542 -18.3197 -88.45924 185.6476 -18.04951 -57.14598 -23.80673 15.34025 -63.21877 6.680542 -77.17039 -32.21294 73.91672 17.64312 -93.11659 82.73349 -12.54554 10.74276 66.05872 -109.976 -15.30152 176.9896 -39.92175 -17.81214 90.46811 39.5499 -39.08738 146.2228 -28.13393 -91.61705 184.0455 77.89314 -24.18365 187.2899 122.1066 -10.0638 170.9113 29.45351 -50.0164 85.11685 121.6468 -13.14838 54.99704 15.55297 37.28454 139.6078 -37.5943 15.71027 125.2672 74.49567 82.41668 -41.14233 95.22713 108.4281 -50.90199 26.14159 33.7221 24.93997 133.0312 40.215 87.33551 -17.32815 -29.72826 74.68036 66.42493 -86.94997 9.796448 -47.61547 -89.05297 47.6442 66.60519 -18.00909 -45.41313 97.09245 -47.33338 5.13858 -23.76847 -39.80179 117.86 116.3858 74.49044 137.3201 99.72975 -24.4688 24.83661 88.90023 42.2376 62.78461 13.33679 -2.595818 -36.80658 -9.548128 0.03591156 67.65997 -88.69444 -6.456985 84.83133 -20.3516 1.150719 63.78793 24.37396 -31.63695 47.54202 66.60841 -66.36201 -48.92006 97.20215 -51.93504 -0.4907684 -23.59241 -68.75294 -46.06689 -18.45463 6.803436 19.14316 37.78148 -48.28016 23.39679 -89.58001 -16.9669 45.81622 64.84218 -29.72824 129.2955 50.49168 -86.94997 41.47482 147.9733 -89.05293 220.5076 109.0594 -0.4037476 207.3673 23.95395 -55.48058 140.815 137.0206 -57.9912</float_array>
+          <technique_common>
+            <accessor source="#geom-_lod1-positions-array" count="131" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-_lod1-normals">
+          <float_array id="geom-_lod1-normals-array" count="393">-0.8520922 -0.4609537 -0.2479125 -0.9836444 0.08717743 -0.1576193 -0.9836444 0.08717718 -0.1576193 0.01856082 -0.945353 -0.3255198 -0.415989 -0.908359 0.04286068 0.01856073 -0.9453531 -0.3255198 0.4470617 -0.6742505 -0.5878114 -0.7946206 0.6068966 -0.01595702 0.7975328 -0.06996781 -0.5992045 0.447113 -0.4968165 -0.7438167 0.4471129 -0.4968166 -0.7438167 -0.5327716 0.7369309 -0.4160377 -0.1687606 0.9842629 -0.05240482 -0.1687604 0.9842631 -0.05240464 -0.1547962 0.974433 -0.1628446 0.4109089 0.9004668 -0.1425251 -0.1547961 0.974433 -0.1628446 -0.905075 0.1853513 0.3827325 -0.6198566 0.6797912 0.3919971 -0.905075 0.1853513 0.3827325 0.3847676 0.8239335 -0.4160376 0.7779198 0.6261746 -0.05240472 0.7779199 0.6261744 -0.05240462 0.2502507 0.9108177 0.3283073 0.9175431 0.2243411 0.3283074 -0.6700523 0.7308255 -0.1300921 -0.04902383 -0.7617495 -0.6460143 -0.8953238 -0.3694957 0.2487331 0.8277181 -0.5498469 0.1120321 0.4166226 -0.8117901 0.4091729 0.4166228 -0.8117901 0.4091729 -0.1302527 -0.8091657 0.5729616 -0.7983694 -0.4417962 0.4091728 -0.812842 0.1048939 0.5729617 -0.7983695 -0.4417962 0.4091728 -0.5237032 -0.8445021 0.1120318 0.8663126 -0.4656936 0.1806436 0.4531101 -0.8107022 0.3707467 0.4531102 -0.8107022 0.3707467 0.8244704 0.4275455 0.3707468 0.8876933 -0.13558 0.4400212 0.8244705 0.4275455 0.3707469 -0.1077639 -0.8914979 0.440021 0.4925473 0.8513313 0.1806437 0.7815291 0.4479321 0.4342454 0.8449694 -0.112451 0.522859 0.8449694 -0.1124511 0.522859 0.6330289 -0.6361856 0.4410695 0.5306941 0.3724298 0.761354 0.5306941 0.3724297 0.761354 0.5306941 0.3724298 0.761354 -0.08601612 0.3197087 0.9436035 -0.08601612 0.3197087 0.9436035 -0.08601613 0.3197087 0.9436035 -0.08601625 -0.1221528 0.988777 -0.08601625 -0.1221528 0.988777 -0.08601625 -0.1221528 0.988777 -0.3648432 -0.7177072 0.5931153 -0.3648432 -0.7177072 0.5931153 -0.3648432 -0.7177072 0.5931153 0.6393369 0.1306971 0.7577378 0.6393369 0.1306971 0.7577378 0.6393369 0.1306971 0.7577378 -0.07879136 0.8312131 0.5503424 -0.07879136 0.8312131 0.5503424 -0.07879136 0.8312131 0.5503424 -0.1506138 0.1784887 0.9723462 -0.1506138 0.1784887 0.9723463 -0.1506138 0.1784887 0.9723462 -0.7510203 0.6507053 0.1120318 -0.3099339 0.8582066 0.4091729 -0.309934 0.8582066 0.4091728 -0.1106469 0.6431099 0.7577381 -0.1106469 0.6431098 0.7577381 -0.1106469 0.6431098 0.7577381 -0.3589731 0.6310827 0.6876576 -0.3589731 0.6310827 0.6876576 -0.3589731 0.6310827 0.6876577 -0.374818 0.2738078 0.8857431 -0.3748179 0.2738078 0.8857431 -0.374818 0.2738078 0.8857431 0.3888376 -0.5187923 0.761354 0.3888376 -0.5187922 0.761354 0.3888376 -0.5187923 0.761354 -0.1939013 -0.5760689 0.7940699 -0.1939013 -0.5760689 0.7940699 -0.1939013 -0.5760689 0.7940699 -0.22819 0.6355801 0.7375413 -0.4713448 0.1366884 0.8712924 -0.22819 0.6355802 0.7375413 0.2011612 -0.2849512 0.9371964 0.2011612 -0.2849512 0.9371964 0.2011612 -0.2849512 0.9371964 0.09774707 -0.5586814 0.8236023 0.09774706 -0.5586813 0.8236022 0.09774707 -0.5586814 0.8236023 -0.02599962 -0.3919498 0.9196192 -0.02599962 -0.3919497 0.9196191 -0.02599962 -0.3919498 0.9196191 -0.1095679 -0.5186411 0.8479424 -0.1095679 -0.5186411 0.8479424 -0.1095679 -0.5186411 0.8479424 0.7327248 -0.5446759 0.4079737 0.7327247 -0.5446759 0.4079737 0.7327247 -0.5446759 0.4079737 -0.6515442 0.3583696 0.6686264 -0.6515442 0.3583696 0.6686264 -0.6515442 0.3583696 0.6686264 -0.3222415 -0.07598012 0.9436035 -0.3222415 -0.07598013 0.9436035 -0.3222415 -0.07598012 0.9436034 0.2122075 -0.9559851 0.2026339 0.2122075 -0.9559851 0.2026339 0.2122075 -0.9559851 0.2026339 0.03469614 -0.0361376 0.9987444 0.03469614 -0.0361376 0.9987444 0.03469614 -0.03613759 0.9987443 0.08933335 0.9273322 0.3634206 0.2321618 0.7860126 0.5729617 0.119404 -0.08979296 0.988777 0.119404 -0.08979297 0.988777 0.119404 -0.08979297 0.988777 0.5108538 0.2212975 0.830696 0.5108538 0.2212975 0.830696 0.5108538 0.2212975 0.830696 0.5452362 0.5056248 0.6686264 0.5452362 0.5056248 0.6686264 0.5452362 0.5056248 0.6686263 -0.6261987 -0.3531529 0.6950959 -0.6261987 -0.3531529 0.6950958 -0.6261987 -0.3531529 0.6950958</float_array>
+          <technique_common>
+            <accessor source="#geom-_lod1-normals-array" count="131" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-_lod1-map1">
+          <float_array id="geom-_lod1-map1-array" count="393">1 0 0 3.72529e-9 0 0 1 1 0 0 1 0 1 0 0 3.72529e-9 0 0 1 1 0 0 1 0 1 0 0 1 1 0 0 1 0 1 0 0 1 1 0 0 1 0 1 0 0 3.72529e-9 0 0 0 1 0 1 0 0 3.72529e-9 0 0 1 1 0 0 1 0 1 0 0 3.72529e-9 0 0 1 1 0 0 1 0 1 0 0 3.72529e-9 0 0 1 1 0 0 1 0 1 0 0 3.72529e-9 0 0 1 1 0 0 1 0 1 0 0 3.72529e-9 0 0 1 1 0 0 1 0 1 0 0 3.72529e-9 0 0 1 1 0 0 1 0 1 0 0 1 1 0 0 1 0 1 0 0 3.72529e-9 0 0 0 1 0 1 0 0 3.72529e-9 0 0 0 1 0 1 0 0 3.72529e-9 0 0 1 1 0 0 1 0 1 0 0 1 1 0 0 1 0 1 0 0 1 1 0 0 1 0 1 0 0 3.72529e-9 0 0 0 1 0 1 0 0 3.72529e-9 0 0 0 1 0 1 0 0 3.72529e-9 0 0 1 1 0 0 1 0 1 0 0 1 1 0 0 1 0 1 0 0 3.72529e-9 0 0 1 1 0 0 1 0 1 0 0 3.72529e-9 0 0 1 1 0 0 1 0 1 0 0 1 1 0 0 1 0 1 0 0 1 1 0 0 1 0 1 0 0 1 1 0 0 1 0 1 0 0 3.72529e-9 0 0 0 1 0 1 0 0 1 1 0 0 1 0 1 0 0 1 1 0 0 1 0 1 0 0 1 1 0 0 1 0 1 0 0 1 1 0 0 1 0 1 0 0 3.72529e-9 0 0 0 1 0 1 0 0 1 1 0 0 1 0 1 0 0 3.72529e-9 0 0 0 1 0 1 0 0 1 1 0 0 1 0 1 0 0 1 1 0 0 1 0 1 0 0 3.72529e-9 0 0 1 1 0 0 1 0 1 0 0 3.72529e-9 0 0 0 1 0 1 0 0 3.72529e-9 0 0 1 1 0 0 1 0</float_array>
+          <technique_common>
+            <accessor source="#geom-_lod1-map1-array" count="131" stride="3">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+              <param name="P" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="geom-_lod1-vertices">
+          <input semantic="POSITION" source="#geom-_lod1-positions"/>
+        </vertices>
+        <triangles material="branch" count="14">
+          <input semantic="VERTEX" source="#geom-_lod1-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#geom-_lod1-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#geom-_lod1-map1" offset="2" set="0"/>
+          <p>2 0 36 1 1 34 7 2 35 6 3 38 5 4 37 3 5 39 4 6 40 6 3 38 3 5 39 1 1 34 0 7 33 7 2 35 9 8 32 26 9 30 8 10 31 12 11 24 23 12 22 11 13 23 25 14 5 16 15 4 14 16 6 27 17 18 19 18 17 17 19 19 21 20 28 24 21 26 20 22 27 23 12 22 13 23 21 11 13 23 24 21 26 22 24 25 20 22 27 15 25 7 25 14 5 14 16 6 26 9 30 10 26 29 8 10 31 18 27 20 27 17 18 17 19 19</p>
+        </triangles>
+        <triangles material="leaf" count="39">
+          <input semantic="VERTEX" source="#geom-_lod1-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#geom-_lod1-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#geom-_lod1-map1" offset="2" set="0"/>
+          <p>29 28 123 31 29 121 28 30 122 31 29 121 30 31 120 28 30 122 35 32 78 34 33 77 32 34 79 33 35 80 35 32 78 32 34 79 37 36 69 36 37 67 42 38 68 39 39 1 40 40 0 43 41 2 36 37 67 38 42 66 42 38 68 41 43 3 39 39 1 43 41 2 45 44 130 47 45 128 44 46 129 47 45 128 46 47 127 44 46 129 49 48 101 50 49 99 48 50 100 52 51 10 53 52 8 51 53 9 55 54 56 56 55 54 54 56 55 57 57 61 58 58 60 59 59 62 61 60 13 62 61 11 60 62 12 63 63 48 64 64 47 65 65 49 67 66 98 68 67 96 66 68 97 70 69 76 69 70 74 118 71 75 73 72 89 74 73 87 72 74 88 75 75 106 76 76 105 77 77 107 79 78 126 78 79 125 80 80 124 82 81 59 83 82 57 81 83 58 85 84 116 86 85 114 84 86 115 87 87 51 88 88 50 117 89 52 91 90 43 92 91 41 90 92 42 94 93 119 95 94 117 93 95 118 97 96 16 96 97 15 98 98 14 100 99 72 101 100 70 99 101 71 102 102 64 103 103 63 104 104 65 106 105 110 107 106 108 105 107 109 109 108 86 110 109 84 108 110 85 112 111 92 111 112 91 113 113 90 115 114 95 116 115 93 114 116 94 89 117 53 87 87 51 117 89 52 69 70 74 71 118 73 118 71 75 120 119 104 121 120 102 119 121 103 123 122 46 122 123 45 124 124 44 126 125 83 127 126 81 125 127 82 129 128 113 128 129 112 130 130 111</p>
+        </triangles>
+      </mesh>
+    </geometry>
+  </library_geometries>
+  <library_lights>
+    <light id="EnvironmentAmbientLight" name="EnvironmentAmbientLight">
+      <technique_common>
+        <ambient>
+          <color>0 0 0</color>
+        </ambient>
+      </technique_common>
+    </light>
+  </library_lights>
+  <library_images>
+    <image id="bush_branch_diff_dds">
+      <init_from>./images/bush_branch_diff.dds</init_from>
+    </image>
+    <image id="hartriegel_diff_dds">
+      <init_from>./images/hartriegel_diff.dds</init_from>
+    </image>
+  </library_images>
+  <library_visual_scenes>
+    <visual_scene id="MaxScene">
+      <node name="EnvironmentAmbientLight">
+        <instance_light url="#EnvironmentAmbientLight"/>
+      </node>
+      <node id="node-_lod1" name="_lod1">
+        <node>
+          <matrix>1 0 0 -67.89401 0 1 0 -31.42618 0 0 1 94.55677 0 0 0 1</matrix>
+          <instance_geometry url="#geom-_lod1">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="leaf" target="#leaf-material">
+                  <bind_vertex_input semantic="CHANNEL1" input_semantic="TEXCOORD" input_set="0"/>
+                  <bind_vertex_input semantic="CHANNEL1" input_semantic="TEXCOORD" input_set="0"/>
+                </instance_material>
+                <instance_material symbol="branch" target="#branch-material">
+                  <bind_vertex_input semantic="CHANNEL1" input_semantic="TEXCOORD" input_set="0"/>
+                  <bind_vertex_input semantic="CHANNEL1" input_semantic="TEXCOORD" input_set="0"/>
+                </instance_material>
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+      </node>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#MaxScene"/>
+  </scene>
+</COLLADA>
