@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://d07kglbl55fn"]
+[gd_scene load_steps=22 format=3 uid="uid://d07kglbl55fn"]
 
 [ext_resource type="Texture2D" uid="uid://bgr75lb7q3800" path="res://resources/textures/forest_moss/forest_moss_albedo_512.jpg" id="1_80o1x"]
 [ext_resource type="Texture2D" uid="uid://jclbadgtsq4g" path="res://resources/textures/forest_moss/forest_moss_height_512.jpg" id="2_n0in2"]
@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://i566v0wqsfa" path="res://addons/simplegrasstextured/images/win_pattern.png" id="8_rqic8"]
 [ext_resource type="Script" path="res://addons/simplegrasstextured/grass.gd" id="9_dnm17"]
 [ext_resource type="PackedScene" uid="uid://pci1k6c4tx5e" path="res://resources/models/cornusmas.DAE" id="10_khrjx"]
+[ext_resource type="ArrayOccluder3D" uid="uid://dsbhy40gbhio4" path="res://scenes/main.occ" id="11_ynik3"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_jj6xj"]
 sky_top_color = Color(0.384314, 0.454902, 0.54902, 1)
@@ -54,7 +55,7 @@ uv1_scale = Vector3(150, 150, 150)
 material = SubResource("StandardMaterial3D_u0e23")
 size = Vector3(100, 1, 100)
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_0o6b0"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_w2jtc"]
 render_priority = 0
 shader = ExtResource("6_nf3go")
 shader_parameter/player_pos = Vector3(2.46344, -5.51281, -2.39943)
@@ -80,7 +81,7 @@ shader_parameter/texture_albedo = ExtResource("7_eps6w")
 shader_parameter/wind_pattern = ExtResource("8_rqic8")
 
 [sub_resource type="QuadMesh" id="QuadMesh_8oxqs"]
-material = SubResource("ShaderMaterial_0o6b0")
+material = SubResource("ShaderMaterial_w2jtc")
 
 [sub_resource type="MultiMesh" id="MultiMesh_pt83c"]
 transform_format = 1
@@ -106,6 +107,9 @@ material = SubResource("FogMaterial_5eqed")
 [node name="Camera3d" type="Camera3D" parent="."]
 transform = Transform3D(0.951872, 0.0070747, 0.306413, 0.0044073, 0.999314, -0.0367642, -0.306463, 0.0363453, 0.951189, 7.23001, -5.51281, -0.865309)
 fov = 90.0
+
+[node name="OccluderInstance3D" type="OccluderInstance3D" parent="."]
+occluder = ExtResource("11_ynik3")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -6.79699, 0)

@@ -34,3 +34,4 @@ enabled=PackedStringArray("res://addons/simplegrasstextured/plugin.cfg")
 driver/threads/thread_model=2
 environment/volumetric_fog/volume_size=512
 anti_aliasing/quality/msaa_3d=3
+occlusion_culling/use_occlusion_culling=true
