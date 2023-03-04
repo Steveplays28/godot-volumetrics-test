@@ -27,17 +27,6 @@ extends MultiMeshInstance3D
 @export var mesh : Mesh = null : set = _on_set_mesh
 @export var player_pos := Vector3(1000000, 1000000, 1000000) : set = _on_set_player_pos
 @export var player_radius := 0.5 : set = _on_set_player_radius
-@export_color_no_alpha var albedo := Color.WHITE : set = _on_set_albedo
-@export var texture_albedo : Texture = load("res://addons/simplegrasstextured/textures/grassbushcc008.png") : set = _on_set_texture_albedo
-@export_range(0.0, 1.0) var alpha_scissor_threshold := 0.5 : set = _on_set_alpha_scissor_threshold
-@export var scale_h := 1.0 : set = _on_set_scale_h
-@export var scale_w := 1.0 : set = _on_set_scale_w
-@export var scale_var := -0.25 : set = _on_set_scale_var
-@export_range(0.0, 1.0) var grass_strength := 0.8 : set = _on_set_grass_strength
-@export var wind_dir := Vector3.RIGHT : set = _on_set_wind_dir
-@export var wind_strength := 0.15 : set = _on_set_wind_strength
-@export var wind_turbulence := 1.0 : set = _on_set_wind_turbulence
-@export var wind_pattern : Texture = load("res://addons/simplegrasstextured/images/win_pattern.png") : set = _on_set_wind_pattern
 @export_group("Optimization")
 @export var optimization_by_distance := false : set = _on_set_optimization_by_distance
 @export var optimization_level := 7.0 : set = _on_set_optimization_level
@@ -94,20 +83,8 @@ func _ready():
 			multimesh.mesh = mesh
 		else:
 			multimesh.mesh = _default_mesh
-	for isur in range(multimesh.mesh.get_surface_count()):
-		multimesh.mesh.surface_set_material(isur, _material)
 	_on_set_player_pos(player_pos)
 	_on_set_player_radius(player_radius)
-	_on_set_texture_albedo(texture_albedo)
-	_on_set_alpha_scissor_threshold(alpha_scissor_threshold)
-	_on_set_scale_h(scale_h)
-	_on_set_scale_w(scale_w)
-	_on_set_scale_var(scale_var)
-	_on_set_grass_strength(grass_strength)
-	_on_set_wind_dir(wind_dir)
-	_on_set_wind_strength(wind_strength)
-	_on_set_wind_turbulence(wind_turbulence)
-	_on_set_wind_pattern(wind_pattern)
 	_on_set_optimization_by_distance(optimization_by_distance)
 	_on_set_optimization_level(optimization_level)
 	_on_set_optimization_dist_min(optimization_dist_min)
@@ -298,72 +275,6 @@ func _on_set_player_radius(value : float):
 	player_radius = value
 	if _material != null:
 		_material.set_shader_parameter("player_radius", player_radius)
-
-
-func _on_set_albedo(value : Color):
-	albedo = value;
-	if _material != null:
-		_material.set_shader_parameter("albedo", albedo)
-
-
-func _on_set_texture_albedo(value : Texture):
-	texture_albedo = value
-	if _material != null:
-		_material.set_shader_parameter("texture_albedo", texture_albedo)
-
-
-func _on_set_alpha_scissor_threshold(value : float):
-	alpha_scissor_threshold = value
-	if _material != null:
-		_material.set_shader_parameter("alpha_scissor_threshold", alpha_scissor_threshold)
-
-
-func _on_set_scale_h(value : float):
-	scale_h = value
-	if _material != null:
-		_material.set_shader_parameter("scale_h", scale_h)
-
-
-func _on_set_scale_w(value : float):
-	scale_w = value
-	if _material != null:
-		_material.set_shader_parameter("scale_w", scale_w)
-
-
-func _on_set_scale_var(value : float):
-	scale_var = value
-	if _material != null:
-		_material.set_shader_parameter("scale_var", scale_var)
-
-
-func _on_set_grass_strength(value : float):
-	grass_strength = value
-	if _material != null:
-		_material.set_shader_parameter("grass_strength", grass_strength)
-
-
-func _on_set_wind_dir(value : Vector3):
-	wind_dir = value
-	if _material != null:
-		_material.set_shader_parameter("wind_dir", wind_dir)
-
-
-func _on_set_wind_strength(value : float):
-	wind_strength = value
-	if _material != null:
-		_material.set_shader_parameter("wind_strength", wind_strength)
-
-
-func _on_set_wind_turbulence(value : float):
-	wind_turbulence = value
-	if _material != null:
-		_material.set_shader_parameter("wind_turbulence", wind_turbulence)
-
-
-func _on_set_wind_pattern(value : Texture):
-	wind_pattern = value
-	if _material != null:
-		_material.set_shader_parameter("wind_pattern", wind_pattern)
 
 
 func _on_set_optimization_by_distance(value : bool):
