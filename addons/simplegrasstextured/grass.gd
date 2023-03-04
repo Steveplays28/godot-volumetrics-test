@@ -141,9 +141,9 @@ func erase(pos : Vector3, radius : float):
 	for i in range(array.size()):
 		multi_new.set_instance_transform(i, array[i])
 	multimesh = multi_new
-	if _material != null:
-		for isur in range(multimesh.mesh.get_surface_count()):
-			multimesh.mesh.surface_set_material(isur, _material)
+	# if _material != null:
+	# 	for isur in range(multimesh.mesh.get_surface_count()):
+	# 		multimesh.mesh.surface_set_material(isur, _material)
 
 
 func _update_multimesh():
@@ -183,9 +183,9 @@ func _update_multimesh():
 	for i in range(_buffer_add.size()):
 		multi_new.set_instance_transform(i + count_prev, _buffer_add[i])
 	multimesh = multi_new
-	if _material != null:
-		for isur in range(multimesh.mesh.get_surface_count()):
-			multimesh.mesh.surface_set_material(isur, _material)
+	# if _material != null:
+	# 	for isur in range(multimesh.mesh.get_surface_count()):
+	# 		multimesh.mesh.surface_set_material(isur, _material)
 	_buffer_add.clear()
 
 
