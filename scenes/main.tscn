@@ -1,6 +1,7 @@
-[gd_scene load_steps=23 format=3 uid="uid://d07kglbl55fn"]
+[gd_scene load_steps=25 format=3 uid="uid://d07kglbl55fn"]
 
 [ext_resource type="Texture2D" uid="uid://bgr75lb7q3800" path="res://resources/textures/forest_moss/forest_moss_albedo_512.jpg" id="1_80o1x"]
+[ext_resource type="Script" path="res://scripts/player_controller.gd" id="2_16s66"]
 [ext_resource type="Texture2D" uid="uid://jclbadgtsq4g" path="res://resources/textures/forest_moss/forest_moss_height_512.jpg" id="2_n0in2"]
 [ext_resource type="Texture2D" uid="uid://cc47crp1c8t0s" path="res://resources/textures/forest_moss/forest_moss_normal_512.jpg" id="3_wmxl0"]
 [ext_resource type="Texture2D" uid="uid://c2ohw4ojklhp2" path="res://resources/textures/forest_moss/forest_moss_roughness_512.jpg" id="4_n0x6l"]
@@ -38,6 +39,8 @@ density = 0.1
 albedo = Color(1, 1, 0.686275, 1)
 emission = Color(0.811765, 0.423529, 0.380392, 1)
 height_falloff = 4.0
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_dlgyq"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_36sfd"]
 size = Vector3(100, 1, 100)
@@ -111,24 +114,32 @@ directional_shadow_blend_splits = true
 size = Vector3(1000, 200, 1000)
 material = SubResource("FogMaterial_5eqed")
 
-[node name="Camera3d" type="Camera3D" parent="."]
-transform = Transform3D(0.951872, 0.0070747, 0.306413, 0.0044073, 0.999314, -0.0367642, -0.306463, 0.0363453, 0.951189, 7.23001, -5.51281, -0.865309)
-fov = 90.0
-
 [node name="OccluderInstance3D" type="OccluderInstance3D" parent="."]
 occluder = ExtResource("11_ynik3")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="."]
+[node name="CharacterBody3D" type="CharacterBody3D" parent="." node_paths=PackedStringArray("camera")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -5, 0)
+script = ExtResource("2_16s66")
+camera = NodePath("Camera3d")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D"]
+shape = SubResource("CapsuleShape3D_dlgyq")
+
+[node name="Camera3d" type="Camera3D" parent="CharacterBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.8, 0)
+fov = 90.0
+
+[node name="World" type="StaticBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -6.79699, 0)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="World"]
 shape = SubResource("BoxShape3D_36sfd")
 
-[node name="Floor" type="MeshInstance3D" parent="StaticBody3D"]
+[node name="Floor" type="MeshInstance3D" parent="World"]
 mesh = SubResource("BoxMesh_sc87x")
 skeleton = NodePath("../..")
 
-[node name="SimpleGrassTextured" type="MultiMeshInstance3D" parent="StaticBody3D"]
+[node name="SimpleGrassTextured" type="MultiMeshInstance3D" parent="World"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 multimesh = SubResource("MultiMesh_pt83c")
 script = ExtResource("9_dnm17")
@@ -144,7 +155,7 @@ sgt_dist_min = 0.0
 sgt_follow_normal = false
 metadata/SimpleGrassTextured = "1.0.2"
 
-[node name="BeechTrees" type="MultiMeshInstance3D" parent="StaticBody3D"]
+[node name="BeechTrees" type="MultiMeshInstance3D" parent="World"]
 multimesh = SubResource("MultiMesh_kr51m")
 script = ExtResource("9_dnm17")
 mesh = ExtResource("10_40128")
