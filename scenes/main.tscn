@@ -129,17 +129,17 @@ shape = SubResource("CapsuleShape3D_dlgyq")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.8, 0)
 fov = 90.0
 
-[node name="World" type="StaticBody3D" parent="."]
+[node name="Terrain" type="StaticBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -6.79699, 0)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="World"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Terrain"]
 shape = SubResource("BoxShape3D_36sfd")
 
-[node name="Floor" type="MeshInstance3D" parent="World"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Terrain"]
 mesh = SubResource("BoxMesh_sc87x")
 skeleton = NodePath("../..")
 
-[node name="SimpleGrassTextured" type="MultiMeshInstance3D" parent="World"]
+[node name="SimpleGrassTextured" type="MultiMeshInstance3D" parent="Terrain"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 multimesh = SubResource("MultiMesh_pt83c")
 script = ExtResource("9_dnm17")
@@ -155,7 +155,7 @@ sgt_dist_min = 0.0
 sgt_follow_normal = false
 metadata/SimpleGrassTextured = "1.0.2"
 
-[node name="BeechTrees" type="MultiMeshInstance3D" parent="World"]
+[node name="BeechTrees" type="MultiMeshInstance3D" parent="Terrain"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00221634, -0.0498652, 3.09944e-05)
 multimesh = SubResource("MultiMesh_r7371")
 script = ExtResource("9_dnm17")
