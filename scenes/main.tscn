@@ -1,10 +1,11 @@
-[gd_scene load_steps=27 format=3 uid="uid://d07kglbl55fn"]
+[gd_scene load_steps=28 format=3 uid="uid://d07kglbl55fn"]
 
 [ext_resource type="Texture2D" uid="uid://bgr75lb7q3800" path="res://resources/textures/forest_moss/forest_moss_albedo_512.jpg" id="1_80o1x"]
 [ext_resource type="Script" path="res://scripts/player_controller.gd" id="2_16s66"]
 [ext_resource type="Texture2D" uid="uid://jclbadgtsq4g" path="res://resources/textures/forest_moss/forest_moss_height_512.jpg" id="2_n0in2"]
 [ext_resource type="Script" path="res://addons/smoother/smoother.gd" id="3_pi4g4"]
 [ext_resource type="Texture2D" uid="uid://cc47crp1c8t0s" path="res://resources/textures/forest_moss/forest_moss_normal_512.jpg" id="3_wmxl0"]
+[ext_resource type="AudioStream" uid="uid://dc7g5qiqc07lg" path="res://resources/audio/footsteps_dirt_012.ogg" id="4_0mjky"]
 [ext_resource type="Texture2D" uid="uid://c2ohw4ojklhp2" path="res://resources/textures/forest_moss/forest_moss_roughness_512.jpg" id="4_n0x6l"]
 [ext_resource type="Shader" path="res://addons/simplegrasstextured/shaders/grass.gdshader" id="6_nf3go"]
 [ext_resource type="Texture2D" uid="uid://c4ggdp0kg5wjk" path="res://addons/simplegrasstextured/textures/grassbushcc008.png" id="7_eps6w"]
@@ -123,10 +124,11 @@ material = SubResource("FogMaterial_5eqed")
 [node name="OccluderInstance3D" type="OccluderInstance3D" parent="."]
 occluder = ExtResource("11_ynik3")
 
-[node name="CharacterBody3D" type="CharacterBody3D" parent="." node_paths=PackedStringArray("camera")]
+[node name="CharacterBody3D" type="CharacterBody3D" parent="." node_paths=PackedStringArray("camera", "footsteps")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -5, 0)
 script = ExtResource("2_16s66")
 camera = NodePath("Camera3d")
+footsteps = NodePath("Footsteps")
 speed = 3.0
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D"]
@@ -138,6 +140,11 @@ fov = 90.0
 
 [node name="Smoother" type="Node" parent="CharacterBody3D"]
 script = ExtResource("3_pi4g4")
+
+[node name="Footsteps" type="AudioStreamPlayer3D" parent="CharacterBody3D"]
+stream = ExtResource("4_0mjky")
+volume_db = -2.0
+unit_size = 1.0
 
 [node name="Terrain" type="StaticBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -6.79699, 0)

@@ -19,3 +19,4 @@ Experimenting with Godot 4's new volumetrics system.
 
 - [*27 Vegetation 3d Assets* by L4M0S](https://l4m0s.itch.io/27-vegetation-3d-assets)
 - [*SimpleGrassTextured* by IcterusGames](https://github.com/IcterusGames/SimpleGrassTextured)
+- [*Footsteps Sounds* by Dryoma](https://dryoma.itch.io/footsteps-sounds)

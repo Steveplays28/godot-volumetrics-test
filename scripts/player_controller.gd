@@ -2,9 +2,12 @@ extends CharacterBody3D
 class_name PlayerController
 
 @export var camera: Camera3D
+@export var footsteps: AudioStreamPlayer3D
 @export_range(0.0, 32.0) var speed: float = 8.0
 @export_range(0.0, 2.0) var view_bob_amplitude: float = 1.0
 @export_range(0.0, 2.0) var view_bob_period: float = 1.0
+
+var footsteps_played: bool = false
 
 func _ready():
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
@@ -40,4 +43,20 @@ func set_shader_globals():
 	RenderingServer.global_shader_parameter_set("player_pos", position)
 
 func bob_view():
-	camera.position.y += sin(Time.get_ticks_msec() * 0.01 * view_bob_period) * get_real_velocity().length() * 0.001 * view_bob_amplitude
+	var amplitude = get_real_velocity().length() * 0.001 * view_bob_amplitude
+	var sine_wave = sin(Time.get_ticks_msec() * 0.01 * view_bob_period) * amplitude
+	
+	camera.position.y += sine_wave
+	calculate_footstep_audio(amplitude, sine_wave)
+
+func calculate_footstep_audio(amplitude: float, sine_wave: float):
+	if (is_zero_approx(sine_wave)):
+		return
+
+	if (abs(sine_wave - amplitude) < 0.001):
+		footsteps_played = false
+
+	if (abs(sine_wave - -amplitude) < 0.001 && !footsteps_played):
+		footsteps.pitch_scale = randf_range(0.8, 1.2)
+		footsteps.play()
+		footsteps_played = true
