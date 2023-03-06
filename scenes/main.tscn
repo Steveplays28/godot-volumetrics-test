@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://d07kglbl55fn"]
+[gd_scene load_steps=30 format=3 uid="uid://d07kglbl55fn"]
 
 [ext_resource type="Texture2D" uid="uid://bgr75lb7q3800" path="res://resources/textures/forest_moss/forest_moss_albedo_512.jpg" id="1_80o1x"]
 [ext_resource type="Script" path="res://scripts/player_controller.gd" id="2_16s66"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://cc47crp1c8t0s" path="res://resources/textures/forest_moss/forest_moss_normal_512.jpg" id="3_wmxl0"]
 [ext_resource type="AudioStream" uid="uid://dc7g5qiqc07lg" path="res://resources/audio/footsteps_dirt_012.ogg" id="4_0mjky"]
 [ext_resource type="Texture2D" uid="uid://c2ohw4ojklhp2" path="res://resources/textures/forest_moss/forest_moss_roughness_512.jpg" id="4_n0x6l"]
+[ext_resource type="AudioStream" uid="uid://bk6nms6jya7rj" path="res://resources/audio/forest_night.wav" id="5_em8ky"]
 [ext_resource type="Shader" path="res://addons/simplegrasstextured/shaders/grass.gdshader" id="6_nf3go"]
 [ext_resource type="Texture2D" uid="uid://c4ggdp0kg5wjk" path="res://addons/simplegrasstextured/textures/grassbushcc008.png" id="7_eps6w"]
 [ext_resource type="Texture2D" uid="uid://i566v0wqsfa" path="res://addons/simplegrasstextured/images/win_pattern.png" id="8_rqic8"]
@@ -14,6 +15,7 @@
 [ext_resource type="ArrayMesh" uid="uid://4xe4cvw0xdgh" path="res://resources/models/beech_a.res" id="10_40128"]
 [ext_resource type="ArrayOccluder3D" uid="uid://dsbhy40gbhio4" path="res://scenes/main.occ" id="11_ynik3"]
 [ext_resource type="ArrayMesh" uid="uid://y1rwv4x5dsm1" path="res://resources/models/cornusmas.res" id="13_y2ce2"]
+[ext_resource type="AudioStream" uid="uid://dedrx6ukf73dw" path="res://resources/audio/winter_storm.wav" id="16_fm6be"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_jj6xj"]
 sky_top_color = Color(0.384314, 0.454902, 0.54902, 1)
@@ -202,3 +204,17 @@ sgt_rotation_rand = 1.0
 sgt_dist_min = 0.0
 sgt_follow_normal = false
 metadata/SimpleGrassTextured = "1.0.2"
+
+[node name="Audio" type="Node" parent="."]
+
+[node name="ForestAmbience" type="AudioStreamPlayer" parent="Audio"]
+stream = ExtResource("5_em8ky")
+volume_db = -10.0
+autoplay = true
+
+[node name="FieldAmbience" type="AudioStreamPlayer3D" parent="Audio"]
+stream = ExtResource("16_fm6be")
+volume_db = -38.5
+unit_size = 100.0
+autoplay = true
+panning_strength = 0.0
