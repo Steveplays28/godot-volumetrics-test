@@ -14,7 +14,6 @@ config/name="godot-volumetrics-test"
 config/description="Experimenting with Godot 4's new volumetrics system."
 run/main_scene="res://scenes/main.tscn"
 config/features=PackedStringArray("4.0")
-config/icon="res://addons/terrain-3d/icon.png"
 
 [dotnet]
 
@@ -58,3 +57,14 @@ driver/threads/thread_model=2
 environment/volumetric_fog/volume_size=512
 anti_aliasing/quality/msaa_3d=3
 occlusion_culling/use_occlusion_culling=true
+
+[shader_globals]
+
+player_pos1={
+"type": "sampler2DArray",
+"value": ""
+}
+player_pos={
+"type": "vec3",
+"value": Vector3(0, 0, 0)
+}

@@ -7,7 +7,10 @@ class_name PlayerController
 func _ready():
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 
-func _physics_process(delta):
+func _process(_delta):
+	set_shader_globals()
+
+func _physics_process(_delta):
 	move()
 
 func _input(event):
@@ -29,3 +32,6 @@ func move():
 	
 	move_and_slide();
 	velocity = Vector3.ZERO;
+
+func set_shader_globals():
+	RenderingServer.global_shader_parameter_set("player_pos", position)
