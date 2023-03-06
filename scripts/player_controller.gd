@@ -10,7 +10,14 @@ class_name PlayerController
 var footsteps_played: bool = false
 
 func _ready():
-	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+	if (!OS.is_debug_build()):
+		Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+
+func _notification(what):
+	if (what == NOTIFICATION_APPLICATION_FOCUS_IN):
+		Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+	if (what == NOTIFICATION_APPLICATION_FOCUS_OUT):
+		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 
 func _process(_delta):
 	set_shader_globals()
