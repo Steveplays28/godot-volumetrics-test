@@ -154,7 +154,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1, 0)
 multimesh = SubResource("MultiMesh_k2ag5")
 script = ExtResource("9_dnm17")
 mesh = SubResource("QuadMesh_8oxqs")
-player_pos = Vector3(2.463, -5.513, -2.399)
 player_radius = 0.0
 optimization_by_distance = true
 sgt_radius = 8.2

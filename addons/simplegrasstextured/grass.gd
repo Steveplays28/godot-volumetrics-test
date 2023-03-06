@@ -25,7 +25,6 @@
 extends MultiMeshInstance3D
 
 @export var mesh : Mesh = null : set = _on_set_mesh
-@export var player_pos := Vector3(1000000, 1000000, 1000000) : set = _on_set_player_pos
 @export var player_radius := 0.5 : set = _on_set_player_radius
 @export_group("Optimization")
 @export var optimization_by_distance := false : set = _on_set_optimization_by_distance
@@ -83,7 +82,6 @@ func _ready():
 			multimesh.mesh = mesh
 		else:
 			multimesh.mesh = _default_mesh
-	_on_set_player_pos(player_pos)
 	_on_set_player_radius(player_radius)
 	_on_set_optimization_by_distance(optimization_by_distance)
 	_on_set_optimization_level(optimization_level)
@@ -263,12 +261,6 @@ func _on_set_mesh(value : Mesh):
 			_material.set_shader_parameter("grass_size_y", 1.0)
 	if Engine.is_editor_hint() and is_inside_tree():
 		_update_multimesh()
-
-
-func _on_set_player_pos(value : Vector3):
-	player_pos = value
-	if _material != null:
-		_material.set_shader_parameter("player_pos", player_pos)
 
 
 func _on_set_player_radius(value : float):
