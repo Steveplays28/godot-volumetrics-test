@@ -127,6 +127,7 @@ occluder = ExtResource("11_ynik3")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -5, 0)
 script = ExtResource("2_16s66")
 camera = NodePath("Camera3d")
+speed = 3.0
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D"]
 shape = SubResource("CapsuleShape3D_dlgyq")
