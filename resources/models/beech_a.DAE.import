@@ -64,6 +64,21 @@ _subresources={
 "save_to_file/make_streamable": "",
 "save_to_file/path": ""
 }
+},
+"nodes": {
+"PATH:beech_a": {
+"generate/physics": true,
+"physics/shape_type": 5,
+"primitive/height": 6.0,
+"primitive/position": Vector3(0, 3, 0),
+"primitive/radius": 0.2
+},
+"PATH:beech_a/lod1": {
+"physics/shape_type": 5,
+"primitive/height": 6.0,
+"primitive/position": Vector3(0, 3, 0),
+"primitive/radius": 0.2
+}
 }
 }
 gltf/embedded_image_handling=1
