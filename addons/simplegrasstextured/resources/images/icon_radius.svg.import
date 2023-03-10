@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://35qfdmr0xvq3"
-path="res://.godot/imported/pointer.png-292374924e7ba5a25097927bb55f262e.ctex"
+uid="uid://clm6vd2es8xm7"
+path="res://.godot/imported/icon_radius.svg-4cffb87170ad4497d9551f0a98ce6086.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://addons/simplegrasstextured/images/pointer.png"
-dest_files=["res://.godot/imported/pointer.png-292374924e7ba5a25097927bb55f262e.ctex"]
+source_file="res://addons/simplegrasstextured/resources/images/icon_radius.svg"
+dest_files=["res://.godot/imported/icon_radius.svg-4cffb87170ad4497d9551f0a98ce6086.ctex"]
 
 [params]
 
@@ -32,3 +32,6 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
+svg/scale=1.0
+editor/scale_with_editor_scale=false
+editor/convert_colors_with_editor_theme=false

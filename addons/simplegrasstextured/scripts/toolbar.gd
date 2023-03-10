@@ -39,7 +39,7 @@ extends HBoxContainer
 @onready var _label_density := $HSliderDensity/Label as Label
 @onready var _tween_radius : Tween = null
 @onready var _tween_density : Tween = null
-var _win_about = load("res://addons/simplegrasstextured/about.tscn").instantiate()
+var _win_about = load("res://addons/simplegrasstextured/scenes/about.tscn").instantiate()
 
 
 func _ready():

@@ -79,7 +79,6 @@ func _ready():
 		_force_update_multimesh = true
 
 	if multimesh == null:
-		print("e")
 		multimesh = MultiMesh.new()
 		multimesh.transform_format = MultiMesh.TRANSFORM_3D
 		multimesh.mesh = mesh

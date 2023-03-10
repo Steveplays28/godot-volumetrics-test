@@ -9,7 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://c2ohw4ojklhp2" path="res://resources/textures/forest_moss/forest_moss_roughness_512.jpg" id="4_n0x6l"]
 [ext_resource type="AudioStream" uid="uid://bk6nms6jya7rj" path="res://resources/audio/forest_night.wav" id="5_em8ky"]
 [ext_resource type="Material" uid="uid://t8675u8rogb1" path="res://resources/materials/grass.material" id="9_cn6ll"]
-[ext_resource type="Script" path="res://addons/simplegrasstextured/grass.gd" id="9_dnm17"]
+[ext_resource type="Script" path="res://addons/simplegrasstextured/scripts/grass.gd" id="9_dnm17"]
 [ext_resource type="ArrayMesh" uid="uid://4xe4cvw0xdgh" path="res://resources/models/beech_a.res" id="10_40128"]
 [ext_resource type="ArrayOccluder3D" uid="uid://dsbhy40gbhio4" path="res://scenes/main.occ" id="11_ynik3"]
 [ext_resource type="ArrayMesh" uid="uid://y1rwv4x5dsm1" path="res://resources/models/cornusmas.res" id="13_y2ce2"]

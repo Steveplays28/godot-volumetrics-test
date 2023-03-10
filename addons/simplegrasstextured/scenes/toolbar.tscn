@@ -1,10 +1,10 @@
 [gd_scene load_steps=10 format=3 uid="uid://dsim5cbhc6kwm"]
 
-[ext_resource type="Script" path="res://addons/simplegrasstextured/toolbar.gd" id="1_aa1o6"]
+[ext_resource type="Script" path="res://addons/simplegrasstextured/scripts/toolbar.gd" id="1_aa1o6"]
 [ext_resource type="Texture2D" uid="uid://bsmcpupaj02v8" path="res://addons/simplegrasstextured/icon.svg" id="2_2ni6b"]
-[ext_resource type="Texture2D" uid="uid://clm6vd2es8xm7" path="res://addons/simplegrasstextured/images/icon_radius.svg" id="3_sf2nv"]
-[ext_resource type="Texture2D" uid="uid://tqiak77omdnr" path="res://addons/simplegrasstextured/images/icon_density.svg" id="4_4c5wp"]
-[ext_resource type="Texture2D" uid="uid://d28dlfkm62t6e" path="res://addons/simplegrasstextured/images/icon_distance.svg" id="5_uonyg"]
+[ext_resource type="Texture2D" uid="uid://clm6vd2es8xm7" path="res://addons/simplegrasstextured/resources/images/icon_radius.svg" id="3_sf2nv"]
+[ext_resource type="Texture2D" uid="uid://tqiak77omdnr" path="res://addons/simplegrasstextured/resources/images/icon_density.svg" id="4_4c5wp"]
+[ext_resource type="Texture2D" uid="uid://d28dlfkm62t6e" path="res://addons/simplegrasstextured/resources/images/icon_distance.svg" id="5_uonyg"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6mh15"]
 

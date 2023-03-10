@@ -57,16 +57,16 @@ func _enter_tree():
 	add_custom_type(
 		"SimpleGrassTextured",
 		"MultiMeshInstance3D",
-		load("res://addons/simplegrasstextured/grass.gd"),
+		load("res://addons/simplegrasstextured/scripts/grass.gd"),
 		load("res://addons/simplegrasstextured/icon.svg")
 	)
-	_gui_toolbar = load("res://addons/simplegrasstextured/toolbar.tscn").instantiate()
+	_gui_toolbar = load("res://addons/simplegrasstextured/scenes/toolbar.tscn").instantiate()
 	_gui_toolbar.visible = false
 	add_control_to_container(EditorPlugin.CONTAINER_SPATIAL_EDITOR_BOTTOM, _gui_toolbar)
 	_raycast_3d = RayCast3D.new()
 	_raycast_3d.visible = false
 	_decal_pointer = Decal.new()
-	_decal_pointer.set_texture(Decal.TEXTURE_ALBEDO, load("res://addons/simplegrasstextured/images/pointer.png"))
+	_decal_pointer.set_texture(Decal.TEXTURE_ALBEDO, load("res://addons/simplegrasstextured/resources/images/pointer.png"))
 	_decal_pointer.visible = false
 	_decal_pointer.extents = Vector3(_edit_radius, DEPTH_BRUSH, _edit_radius)
 	add_child(_raycast_3d)

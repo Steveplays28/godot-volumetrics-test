@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://d28dlfkm62t6e"
-path="res://.godot/imported/icon_distance.svg-6f60df3e00656181a46cdec0eba1538f.ctex"
+path="res://.godot/imported/icon_distance.svg-9f9ddd5f73fd55894d067a9f0a447464.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://addons/simplegrasstextured/images/icon_distance.svg"
-dest_files=["res://.godot/imported/icon_distance.svg-6f60df3e00656181a46cdec0eba1538f.ctex"]
+source_file="res://addons/simplegrasstextured/resources/images/icon_distance.svg"
+dest_files=["res://.godot/imported/icon_distance.svg-9f9ddd5f73fd55894d067a9f0a447464.ctex"]
 
 [params]
 

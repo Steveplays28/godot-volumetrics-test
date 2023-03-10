@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://cb8klhv6nwvtl"]
 
 [ext_resource type="Texture2D" uid="uid://bsmcpupaj02v8" path="res://addons/simplegrasstextured/icon.svg" id="1_at31v"]
-[ext_resource type="Script" path="res://addons/simplegrasstextured/about.gd" id="1_r23hh"]
+[ext_resource type="Script" path="res://addons/simplegrasstextured/scripts/about.gd" id="1_r23hh"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hnw4u"]
 
