@@ -309,7 +309,7 @@ func _eval_brush():
 				var normal := Vector3.UP
 				if _gui_toolbar.chk_normals.button_pressed:
 					normal = _raycast_3d.get_collision_normal()
-				_grass_selected.add_grass(
+				_grass_selected.draw(
 					_raycast_3d.get_collision_point() - _grass_selected.global_position,
 					normal,
 					_edit_scale,
