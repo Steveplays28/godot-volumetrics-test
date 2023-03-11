@@ -39,6 +39,14 @@ func _input(event):
 		camera.rotate(Vector3.RIGHT, -event.relative.y * 0.001)
 
 
+func _unhandled_input(_event):
+	if (Input.is_action_just_pressed("fullscreen")):
+		if (DisplayServer.window_get_mode() != DisplayServer.WINDOW_MODE_FULLSCREEN):
+			DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_EXCLUSIVE_FULLSCREEN)
+		else:
+			DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
+
+
 func move():
 	if Input.is_action_pressed("move_forward"):
 		velocity += -transform.basis.z
