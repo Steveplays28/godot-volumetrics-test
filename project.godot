@@ -63,7 +63,7 @@ occlusion_culling/use_occlusion_culling=true
 
 player_radius={
 "type": "float",
-"value": 2.0
+"value": 1.5
 }
 player_pos={
 "type": "vec3",

@@ -118,9 +118,8 @@ fov = 90.0
 script = ExtResource("3_pi4g4")
 
 [node name="Footsteps" type="AudioStreamPlayer3D" parent="CharacterBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.9, 0)
 stream = ExtResource("4_0mjky")
-volume_db = -2.0
-unit_size = 1.0
 
 [node name="Terrain" type="StaticBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -6.79699, 0)

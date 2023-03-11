@@ -56,7 +56,7 @@ func move():
 
 
 func set_shader_globals():
-	RenderingServer.global_shader_parameter_set("player_pos", position)
+	RenderingServer.global_shader_parameter_set("player_pos", footsteps.global_position)
 
 
 func bob_view():
