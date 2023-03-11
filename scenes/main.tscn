@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://d07kglbl55fn"]
+[gd_scene load_steps=28 format=3 uid="uid://d07kglbl55fn"]
 
 [ext_resource type="Texture2D" uid="uid://bgr75lb7q3800" path="res://resources/textures/forest_moss/forest_moss_albedo_512.jpg" id="1_80o1x"]
 [ext_resource type="Script" path="res://scripts/player_controller.gd" id="2_16s66"]
@@ -43,6 +43,12 @@ emission = Color(0.811765, 0.423529, 0.380392, 1)
 height_falloff = 4.0
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_dlgyq"]
+
+[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_f73yr"]
+dof_blur_far_enabled = true
+dof_blur_far_distance = 25.0
+dof_blur_near_enabled = true
+dof_blur_amount = 0.05
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_36sfd"]
 size = Vector3(100, 1, 100)
@@ -112,6 +118,7 @@ shape = SubResource("CapsuleShape3D_dlgyq")
 
 [node name="Camera3d" type="Camera3D" parent="CharacterBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.8, 0)
+attributes = SubResource("CameraAttributesPractical_f73yr")
 fov = 90.0
 
 [node name="Smoother" type="Node" parent="CharacterBody3D"]
