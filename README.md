@@ -4,7 +4,9 @@ Experimenting with Godot 4's new volumetrics system.
 
 ## Images
 
+![Open field with the forest surrounding it](https://media.discordapp.net/attachments/880162931243876404/1083907711130927114/image.png)
 ![Forest](https://media.discordapp.net/attachments/941681731067576391/1080853313114886184/image.png)
+![Another open field with the forest surrounding it](https://media.discordapp.net/attachments/880162931243876404/1081591958214037634/image.png)
 
 <details>
 <summary>Old images</summary>
