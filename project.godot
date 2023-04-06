@@ -14,7 +14,7 @@ config/name="godot-volumetrics-test"
 config/description="Experimenting with Godot 4's new volumetrics system."
 run/main_scene="res://scenes/main.tscn"
 config/features=PackedStringArray("4.0")
-config/icon="res://addons/simplegrasstextured/icon.svg"
+config/icon="res://docs/logo.png"
 
 [dotnet]
 
