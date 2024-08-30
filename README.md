@@ -32,12 +32,17 @@ Exported to Windows, Linux (x86_64), and MacOS.
 
 Mouse cursor gets hidden when the window is in focus.
 
-## Development
+## Contributing
 
-Godot version: `4.0 stable`
+If you've encountered a problem or you want to suggest
+features, [create an issue](https://github.com/Steveplays28/godot-volumetrics-test/issues/new) on the issue tracker.
 
-If you wish to make changes, please [fork](https://github.com/Steveplays28/godot-volumetrics-test/fork) the repository and make a [pull request](https://github.com/Steveplays28/godot-volumetrics-test/compare).  
-Feel free to open an issue as well.
+### Development
+
+- Download and install [Godot `4.0-stable`](https://godotengine.org/download/archive/4.0-stable/)
+- `git clone https://github.com/Steveplays28/godot-volumetrics-test.git`
+- `cd godot-volumetrics-test`
+- Open in Godot
 
 ## Attribution
 
