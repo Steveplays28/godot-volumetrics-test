@@ -4,17 +4,17 @@ Experimenting with Godot 4's new volumetrics system.
 
 ## Images
 
-![Open field with the forest surrounding it](https://media.discordapp.net/attachments/880162931243876404/1083907711130927114/image.png)
-![Forest](https://media.discordapp.net/attachments/941681731067576391/1080853313114886184/image.png)
-![Another open field with the forest surrounding it](https://media.discordapp.net/attachments/880162931243876404/1081591958214037634/image.png)
+![Open field with the forest surrounding it](docs/banners/banner_1.png)
+![Forest](docs/banners/banner_2.png)
+![Another open field with the forest surrounding it](docs/banners/banner_3.png)
 
 <details>
-<summary>Old images</summary>
+<summary>Old images (ordered from oldest to newest)</summary>
 <br>
 
-![Forest (no grass)](https://media.discordapp.net/attachments/880162931243876404/1080552296460582924/image.png)
+![Light rays](docs/banners/legacy/legacy_banner_1.png)
 
-![Light rays](https://media.discordapp.net/attachments/902166543356542996/995246835880972338/unknown.png)
+![Forest (no grass)](docs/banners/legacy/legacy_banner_2.png)
 </details>
 
 ## Download
